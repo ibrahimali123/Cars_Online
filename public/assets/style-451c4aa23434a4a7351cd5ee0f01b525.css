@@ -1,0 +1,1217 @@
+@charset "UTF-8";
+/* Website template by freewebsitetemplates.com */
+@font-face {
+  font-family: 'Oswald';
+  src: url(/assets/Oswald.eot);
+  src: local("☺"), url(/assets/Oswald.woff) format("woff"), url(/assets/Oswald.ttf) format("truetype"), url("../fonts/Oswald.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuattrocentoSans-Regular';
+  src: url(/assets/QuattrocentoSans-Regular.eot);
+  src: local("☺"), url(/assets/QuattrocentoSans-Regular.woff) format("woff"), url(/assets/QuattrocentoSans-Regular.ttf) format("truetype"), url("../fonts/QuattrocentoSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 17, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+body {
+  background: #211917 url("/assets/bg-body.png") repeat-y center top;
+  font-family: "QuattrocentoSans-Regular";
+  margin: 0;
+}
+
+/* line 22, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+img {
+  border: 0;
+}
+
+/*------------------------------ Sprites ------------------------------*/
+/* line 26, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents, #contents > div, #contents div.body {
+  background-image: url("/assets/bg-body.png");
+  background-repeat: no-repeat;
+}
+
+/* line 30, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.btn1, .btn2 {
+  background: url("/assets/buttons.png") no-repeat;
+  cursor: pointer;
+  font: 14px/24px "Oswald";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 37, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.frame {
+  background: url("/assets/frames.png") no-repeat;
+}
+
+/* line 40, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a, #pagination .previous, #pagination .next, #blog .comments {
+  background: url("/assets/icons.png") no-repeat;
+}
+
+/* line 43, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#sidebar, #sidebar div.body {
+  background-image: url("/assets/bg-sidebar.png");
+  background-repeat: no-repeat;
+}
+
+/* line 47, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.btn1 {
+  background-position: 0 0;
+  color: #966a01;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  width: 109px;
+}
+
+/* line 55, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.btn1:hover {
+  background-position: -114px 0;
+}
+
+/* line 58, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.btn2 {
+  background-position: -13px -39px;
+  font-size: 11px;
+  height: 26px;
+  width: 83px;
+  border: 0;
+  margin: 0;
+}
+
+/* line 66, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.btn2:hover {
+  background-position: -127px -39px;
+}
+
+/** Date Time **/
+/* line 70, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.time {
+  float: left;
+  background: url("/assets/bg-time.png") no-repeat left top;
+  color: #fff;
+  font-family: "Oswald";
+  display: block;
+  height: 42px;
+  width: 32px;
+  margin: 0 5px 15px 0;
+  padding: 0 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/** Tabs **/
+/* line 84, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.tabs {
+  float: right;
+  display: inline-block;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+/* line 91, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.tabs li {
+  float: left;
+  border-left: 1px solid #241b18;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+/* line 97, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.tabs li:first-child {
+  border: 0;
+}
+
+/* line 100, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.tabs a {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 107, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.tabs a:hover, .tabs li.selected a {
+  color: #af8112;
+}
+
+/** Posts **/
+/* line 111, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 116, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts li {
+  display: inline-block;
+  font-size: 13px;
+}
+
+/* line 120, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts p {
+  color: #4b3a33;
+  padding-left: 50px;
+}
+
+/* line 124, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts p b {
+  display: block;
+  font-family: "Oswald";
+  font-weight: normal;
+  margin: 0 0 3px;
+}
+
+/* line 130, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts p a {
+  color: #4b3a33;
+  display: block;
+  font-family: "Oswald";
+  text-decoration: none;
+}
+
+/* line 136, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+.posts p a:hover {
+  color: #241b18;
+}
+
+/*------------------------------ HEADER ------------------------------*/
+/* line 140, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#header {
+  background-color: #241b18;
+  height: 50px;
+  border-bottom: 1px solid #fff;
+  padding: 4px 0 0;
+}
+
+/* line 146, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#header > div {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: right;
+}
+
+/** Logo **/
+/* line 153, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#logo {
+  float: left;
+}
+
+/** Navigation **/
+/* line 157, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#navigation {
+  display: inline-block;
+  line-height: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  *width: 345px;
+  /** Needed for IE7 **/
+}
+
+/* line 165, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#navigation li {
+  float: left;
+  margin: 0 15px;
+}
+
+/* line 169, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#navigation li:first-child {
+  margin-left: 0;
+}
+
+/* line 172, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#navigation li a {
+  color: #fff;
+  font-family: "Oswald";
+  font-size: 14px;
+  padding: 15px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 180, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#navigation li a:hover, #navigation li.selected a {
+  color: #ffc947;
+}
+
+/*------------------------------ CONTENTS ------------------------------*/
+/* line 184, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents {
+  background-position: -961px top;
+  background-repeat: repeat-y;
+  width: 970px;
+  margin: 0 auto;
+}
+
+/* line 190, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents > div {
+  background-position: -1931px bottom;
+  width: 960px;
+  padding: 0 5px 10px;
+}
+
+/* line 195, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents div.body {
+  background-position: 1px top;
+  display: inline-block;
+  width: 940px;
+  padding: 10px 10px 0;
+}
+
+/* line 201, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents div.body h1 {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+/* line 209, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents p {
+  color: #626161;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0 0 24px;
+  text-align: justify;
+}
+
+/* line 217, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents p a {
+  color: #626161;
+}
+
+/* line 220, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents p a:hover {
+  color: #8e8265;
+}
+
+/** Adbox **/
+/* line 224, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox {
+  height: 407px;
+  width: 938px;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: none solid solid;
+  margin: -10px 0 0;
+  position: relative;
+}
+
+/* line 233, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox span.info {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  left: 330px;
+  bottom: 25px;
+}
+
+/* line 241, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox span.info em {
+  display: block;
+  font-size: 24px;
+  font-style: normal;
+}
+
+/* line 246, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox div.details {
+  background: url("/assets/bg-pattern.jpg") no-repeat left top;
+  height: 407px;
+  width: 380px;
+  padding: 61px 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 255, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox div.details h1 {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0 0 24px;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+/* line 264, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#adbox div.details p {
+  color: #241b18;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/** Featured **/
+/* line 271, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured {
+  display: inline-block;
+  list-style: none;
+  width: 940px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 278, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li {
+  float: left;
+  background-color: #4b3a33;
+  width: 314px;
+  overflow: hidden;
+}
+
+/* line 284, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li.bedroom {
+  background-color: #241b18;
+}
+
+/* line 287, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li.kitchen {
+  width: 312px;
+}
+
+/* line 290, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li > div:first-child {
+  height: 179px;
+  width: 314px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 296, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li > div:first-child > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 304, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured li > div:first-child > a:hover {
+  background-color: #fff;
+  filter: alpha(opacity=10);
+  /** Needed for IE8 and below **/
+  opacity: 0.1;
+}
+
+/* line 309, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured div.details {
+  background: url("/assets/separator-light.png") repeat-x left top;
+  padding: 16px 20px 0;
+}
+
+/* line 313, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured div.details h4 {
+  color: #ffc947;
+  font-family: "Oswald";
+  font-weight: normal;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+/* line 320, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured div.details p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 325, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured div.details p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 329, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#featured div.details p a:hover {
+  color: #ffc947;
+}
+
+/* line 332, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.contact {
+  float: left;
+  background: url("/assets/separator-light-vertical.png") repeat-y right top;
+  height: 225px;
+  width: 254px;
+  padding: 20px 40px 0 20px;
+}
+
+/* line 339, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents div.contact p {
+  color: #7b7b7b;
+  font-family: "Oswald";
+  font-size: 14px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+}
+
+/* line 346, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.contact p b {
+  color: #241b18;
+  display: block;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 0 0 24px;
+}
+
+/* line 354, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.contact p b.email {
+  text-transform: lowercase;
+}
+
+/* line 357, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog {
+  display: inline-block;
+  height: 225px;
+  width: 626px;
+  padding: 20px 0 0;
+}
+
+/* line 363, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog h4 {
+  color: #7b7b7b;
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 0 12px;
+  padding-left: 21px;
+  text-transform: uppercase;
+}
+
+/* line 373, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog > div {
+  float: left;
+  background: url("/assets/bg-box.png") no-repeat left top;
+  width: 254px;
+  margin: 0 21px;
+  padding: 0 0 0 15px;
+  position: relative;
+}
+
+/* line 381, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog > div img {
+  float: right;
+  margin-left: 20px;
+}
+
+/* line 385, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog span {
+  color: #4b3a33;
+  display: block;
+  font-size: 12px;
+  margin: 18px 0 0;
+}
+
+/* line 391, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents div.blog > div p {
+  color: #4b3a33;
+  font-family: "Oswald";
+  line-height: 18px;
+  padding: 12px 0;
+  text-align: left;
+}
+
+/* line 398, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog a.more {
+  color: #4b3a33;
+  font: 12px/24px 'Oswald';
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 18px;
+  left: 15px;
+}
+
+/* line 407, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+div.blog a.more:hover {
+  color: #af8112;
+}
+
+/** Main **/
+/* line 411, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#main {
+  width: 448px;
+}
+
+/** Sidebar **/
+/* line 415, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#sidebar {
+  float: right;
+  background-position: 0 0;
+  width: 432px;
+  margin-left: 20px;
+  padding: 2px 0 0;
+}
+
+/* line 422, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#sidebar div.body {
+  background-position: -438px 0;
+  background-repeat: repeat-y;
+  min-height: 100px;
+  width: 432px;
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+/* line 430, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#sidebar div.contact {
+  background: none;
+  height: auto;
+  width: 392px;
+  padding: 20px 20px 0;
+}
+
+/* line 436, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#sidebar div.contact p {
+  text-align: center;
+}
+
+/* line 439, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents #about, #contents #contact {
+  min-height: 900px;
+  width: 900px;
+  padding: 20px 30px 0;
+}
+
+/** About **/
+/* line 445, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#about p span {
+  font-size: 12px;
+}
+
+/* line 448, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#about #main h1 {
+  background: url(../images/separator-light.png) repeat-x left bottom;
+  padding: 0 0 18px;
+}
+
+/* line 452, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#about #main h4 {
+  color: #626161;
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+/** Gallery **/
+/* line 462, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents #gallery {
+  min-height: 900px;
+  width: 860px;
+  padding: 20px 50px 0;
+}
+
+/* line 467, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery h1 {
+  background: url(../images/separator-light.png) repeat-x left bottom;
+  padding: 0 0 6px;
+}
+
+/* line 471, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 476, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .items li {
+  background: url(../images/separator-light.png) repeat-x left bottom;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 0 0 24px;
+}
+
+/* line 483, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .items li h5 {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+/* line 491, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .items li p {
+  color: #626161;
+  padding-right: 10px;
+}
+
+/* line 495, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .frame {
+  float: left;
+  background-position: 0 0;
+  height: 264px;
+  width: 418px;
+  margin-left: -38px;
+  padding: 1px 21px 0 41px;
+  text-align: center;
+}
+
+/* line 504, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .details {
+  margin: 0 0 18px;
+}
+
+/* line 507, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .items .details h5 {
+  margin: 0;
+}
+
+/* line 510, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .details p {
+  color: #626161;
+  padding: 0;
+}
+
+/* line 514, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .details p b {
+  color: #241b18;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 519, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#gallery .price {
+  color: #ab7d0f;
+  font-size: 22px;
+}
+
+/** Blog **/
+/* line 524, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contents #blog {
+  width: 860px;
+  padding: 20px 50px 10px;
+}
+
+/* line 528, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar {
+  background: url(../images/separator-light-vertical.png) repeat-y left top;
+  min-height: 899px;
+  width: 240px;
+  margin-left: 0;
+  padding-left: 33px;
+}
+
+/* line 535, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar > div {
+  background: url(../images/separator-light.png) repeat-x left top;
+  margin: 0 0 24px;
+  padding: 24px 0 0;
+}
+
+/* line 540, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar > div ul {
+  color: #4b3a33;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 546, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar > div:first-child {
+  background: none;
+  margin: 0;
+  padding-top: 0;
+}
+
+/* line 551, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar > div ul li a {
+  color: #4b3a33;
+  font: 13px/24px "Oswald";
+  text-decoration: none;
+}
+
+/* line 556, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar > div ul li a:hover {
+  color: #241b18;
+}
+
+/* line 559, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar h5 {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 30px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* line 568, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .posts {
+  margin: -6px 0 0;
+}
+
+/* line 571, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar .time {
+  margin: 5px 5px 0 0;
+}
+
+/* line 574, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #sidebar .posts p {
+  color: #4b3a33;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 50px;
+  text-align: left;
+}
+
+/* line 581, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #main {
+  min-height: 900px;
+  width: 560px;
+  position: relative;
+}
+
+/* line 586, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog div.viewer {
+  background: url(../images/separator-light.png) repeat-x left bottom;
+  margin: 0 0 30px;
+  padding: 0 0 24px;
+}
+
+/* line 591, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #main span.time {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 3px 5px 0 0;
+}
+
+/* line 596, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #main h3 {
+  font-family: "Oswald";
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* line 603, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #main h3 a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 607, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #main div.frame {
+  background-position: 0 -269px;
+  height: 262px;
+  width: 560px;
+  margin: 0 0 18px -40px;
+  padding: 1px 20px 1px 41px;
+}
+
+/* line 614, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .info {
+  color: #626161;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 0 0 6px;
+  text-transform: uppercase;
+}
+
+/* line 621, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .info a {
+  text-decoration: none;
+}
+
+/* line 624, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .more, #blog .comments {
+  color: #241b18;
+  font: 12px/24px "Oswald";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 630, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .more {
+  float: right;
+}
+
+/* line 633, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog .comments {
+  background-position: 0 -45px;
+  padding-left: 20px;
+}
+
+/* line 637, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog div.viewer a:hover, #blog .info a:hover, #pagination > a:hover, #blog #main h3 a:hover {
+  color: #b1861f;
+}
+
+/* line 640, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#blog #pagination {
+  position: absolute;
+  bottom: 0;
+}
+
+/** Pagination **/
+/* line 645, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 650, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination .previous, #pagination .next {
+  float: left;
+  background-position: 0 -69px;
+  color: #241b18;
+  display: inline-block;
+  height: 15px;
+  padding-left: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 660, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination .next {
+  float: right;
+  background-position: right -91px;
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+/* line 666, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  *width: 150px;
+}
+
+/* line 673, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination ul li {
+  float: left;
+  color: #626161;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 2px;
+}
+
+/* line 680, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination ul li a {
+  background-color: #d2d2d2;
+  color: #626161;
+  font-size: 13px;
+  padding: 0 7px;
+  text-decoration: none;
+}
+
+/* line 687, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#pagination ul li a:hover, #pagination ul li.selected a {
+  background-color: #ffc947;
+  color: #241b18;
+}
+
+/** Contact **/
+/* line 692, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contact form {
+  background: url(../images/separator-light.png) repeat-x left top;
+  padding: 30px 0 0;
+}
+
+/* line 696, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contact form label {
+  color: #626161;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 702, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contact form input {
+  color: #626161;
+  font-size: 13px;
+  height: 27px;
+  line-height: 27px;
+  width: 440px;
+  border: 3px solid #af8112;
+  margin: 0 0 12px;
+}
+
+/* line 711, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contact form input.btn1 {
+  color: #966a01;
+  cursor: pointer;
+  font-family: "Oswald";
+  height: 34px;
+  line-height: 34px;
+  width: 109px;
+  border: 0;
+  padding: 0 0 2px;
+  text-transform: uppercase;
+}
+
+/* line 722, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#contact textarea {
+  color: #626161;
+  font-size: 14px;
+  height: 158px;
+  line-height: 24px;
+  width: 440px;
+  border: 3px solid #af8112;
+  margin: 0 0 12px;
+  overflow: auto;
+  resize: none;
+}
+
+/*------------------------------ FOOTER ------------------------------*/
+/* line 734, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer {
+  background-color: #e2b241;
+  border-top: 1px solid #fff;
+  padding: 28px 0 14px;
+}
+
+/* line 739, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer p {
+  color: #4b3a33;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+}
+
+/* line 745, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer > div {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* line 750, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer .posts {
+  float: left;
+  height: 300px;
+  width: 302px;
+  padding: 0;
+}
+
+/* line 756, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer .posts li {
+  width: 276px;
+  margin: 0 0 30px;
+  padding-left: 10px;
+}
+
+/* line 761, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer .posts p a {
+  line-height: 24px;
+  margin: -3px 0 3px;
+}
+
+/* line 765, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links {
+  background: url("/assets/separator-dark.png") repeat-x left bottom;
+  color: #4b3a33;
+  display: inline-block;
+  width: 940px;
+  padding: 0 0 20px;
+}
+
+/* line 772, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links h4 {
+  color: #241b18;
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 0 12px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+/* line 782, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links > div {
+  float: left;
+  background: url("/assets/separator-dark-vertical.png") repeat-y left top;
+  height: 300px;
+  padding-left: 20px;
+}
+
+/* line 788, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom {
+  background: none;
+  width: 293px;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+/* line 794, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom h4 {
+  padding-left: 0;
+}
+
+/* line 797, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom img {
+  margin-bottom: 12px;
+}
+
+/* line 800, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* line 804, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom p em {
+  color: #fff;
+  display: block;
+  font-style: normal;
+  margin: 0 0 20px;
+}
+
+/* line 810, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom p a {
+  color: #4b3a33;
+  display: block;
+}
+
+/* line 814, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#links .showroom p a:hover {
+  color: #241b18;
+}
+
+/* line 817, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#newsletter {
+  background: url("/assets/separator-dark.png") repeat-x left bottom;
+  width: 284px;
+  margin: 0 0 16px 6px;
+  padding: 0 0 20px;
+}
+
+/* line 823, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#newsletter h4 {
+  padding-left: 0;
+}
+
+/* line 826, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#newsletter input {
+  color: #4b3a33;
+  height: 26px;
+  line-height: 26px;
+  width: 269px;
+  border: 3px solid #af8112;
+  margin: 0 0 6px;
+  padding: 0 4px;
+  *margin-left: -6px;
+  /** Needed for IE7 **/
+}
+
+/* line 836, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#newsletter input.btn2 {
+  color: #fff;
+  width: 83px;
+  border: 0;
+  padding: 0px 0 2px;
+}
+
+/* line 842, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a {
+  display: inline-block;
+  height: 33px;
+  margin: 0 10px;
+}
+
+/* line 847, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.facebook {
+  background-position: -46px -112px;
+  width: 33px;
+}
+
+/* line 851, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.googleplus {
+  background-position: -46px -153px;
+  width: 34px;
+}
+
+/* line 855, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.twitter {
+  background-position: -46px -194px;
+  width: 40px;
+}
+
+/* line 859, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.facebook:hover {
+  background-position: 0 -112px;
+}
+
+/* line 862, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.googleplus:hover {
+  background-position: 0 -153px;
+}
+
+/* line 865, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#connect a.twitter:hover {
+  background-position: 0 -194px;
+}
+
+/* line 868, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer ul.navigation {
+  float: right;
+  display: inline-block;
+  line-height: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 876, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer ul.navigation li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* line 880, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer ul.navigation li:first-child {
+  margin-left: 0;
+}
+
+/* line 883, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer ul.navigation li a {
+  color: #ab7d0f;
+  font: 11px/24px "Oswald";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 889, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer ul.navigation li a:hover {
+  color: #241b18;
+}
+
+/* line 892, /home/ibrahim/Videos/Cars_Online/app/assets/stylesheets/style.css.scss */
+#footer #footnote {
+  color: #ab7d0f;
+  font: 11px/24px "Oswald";
+  margin: 0;
+  text-transform: uppercase;
+}
