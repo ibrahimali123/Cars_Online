@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />  
+        <%= stylesheet_link_tag 'demo.css',media: 'all' %> 
+        <%= stylesheet_link_tag 'animate-custom.css',media: 'all' %> 
+        <%= stylesheet_link_tag 'style3.css',media: 'all' %> 
+    </head>
+    <body>
+        <div class="container">
+            <br /> <br />
+            <section>       
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  --> 
+                    <div id="wrapper"> 
+
+                        <div  id="login" class="animate form">
+                            <form> 
+                                <br />
+                                <h1> Sign up </h1> 
+                                <p>  
+                                    <label for="usernamesignup" class="uname" data-icon="u">
+                                    <%= f.label "Your firstName"  %>  
+                                    <%= f.text_field :firstName , :autofocus => true, :id => 'usernamesignup', :placeholder => 'myfirstname'   %> 
+                                </p>
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u"> 
+                                        <%= f.label "Your lastName" %>
+                                    </label> 
+                                        <%= f.text_field :lastName , :autofocus => true, :id => 'usernamesignup', :placeholder => 'myssecondname'   %>  
+                                </p>
+                                <p> 
+                                    <label for="usernamesignup" class="uname"> 
+                                        <%= f.label "Your City" %>
+                                    </label>
+                                        <%= f.select :City, options_for_select(%w[Cairo Giza Daqahliyah Bahr_alAhmar Buhayrah Fayyum Gharbiyah Alex Ismailiyah Minufiyah Minya|Al Qahirah Qalyubiyah Aswan Asyut BaniSuwayf]), :id => 'usernamesignup' %>  
+                                </p> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u"> 
+                                        <%= f.label "Your Address" %>
+                                    </label> 
+                                        <%= f.text_field :Address , :autofocus => true, :id => 'usernamesignup', :placeholder => 'my Address'   %>  
+                                </p>
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u"> 
+                                        <%= f.label "Your Mobile Phone" %>
+                                    </label> 
+                                        <%= f.text_field :Phone , :autofocus => true, :id => 'usernamesignup', :placeholder => 'myssecondname'   %>  
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e"> 
+                                        <%= f.label "Your email" %>
+                                    </label> <br/>
+                                        <%= f.email_field :email , :autofocus => true, :id => 'emailsignup', :placeholder => 'my email'   %> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p"> 
+                                        <%= f.label "Your password" %>
+                                        <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+                                    </label> <br/>
+                                        <%= f.password_field :password , :autofocus => true, :id => 'passwordsignup', :placeholder => 'my password'   %>  
+                                </p> 
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p"> 
+                                        <%= f.label "password confirmation" %> 
+                                    </label> <br/>
+                                        <%= f.password_field :password_confirmation , :autofocus => true, :id => 'passwordsignup', :placeholder => 'my password'   %> 
+                                </p> 
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd"> 
+                                        <%= f.label "Profile Picture" %> 
+                                    </label> <br/>
+                                        <%= f.file_field :profilephoto %>  
+                                </p> 
+                                <p class="signin button action"><%= f.submit "Sign up" %> </p>
+                                <% end %> 
+
+                                <p class="change_link">  
+                                 Already a member ?
+                                  <a class="to_register"><%= render "users/shared/links" %> </a>
+                                 </p>
+                            </form>
+                        </div>
+            
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html> 
+  
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarsOnline</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Viga&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+  <%= auto_discovery_link_tag :atom, '/posts.atom' %> 
+
+  <%= stylesheet_link_tag 'style.css',media: 'all' %>  
+</head>
+<body> 
+
+  <div class="container">       
+      <div id="container_demo"> 
+            
+        <div id="wrapper">
+            <div class="posts animate form" id="login">
+                 <form  autocomplete="on"> 
+        
+                 <p>
+                   <h1>Model:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.model %></h1>
+                 </p>
+                 <p>
+                   <h1>Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.price %></h1>
+                 </p>
+                 <p>
+                   <h1>Brand:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.brand %></h1>
+                 </p>
+                 <p>
+                   <h1>umber of km:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.number_of_km %></h1>
+                 </p>
+                 <p>
+                   <h1>car_capacity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.car_capacity %></h1>
+                 </p>  
+                 <p>
+                   <h1>Description:</h1>
+                   <h1><%= @post.description %></h1>
+                 </p> 
+
+                 <ul>
+                   <% for asset in @post.assets %>
+                     <%= image_tag asset.image.url, :size => "200x200" %> 
+                   <% end %>
+                 </ul>
+             
+                 <br /><h1></h1><br />
+
+                 <h1>Comments</h1>
+                   <% @post.comments.each do |comment| %>
+                       <h5>
+                       <% if comment.user_id != nil %>
+                          <% @user = User.find(comment.user_id)  %>
+                          <%= image_tag @user.profilephoto.url, :size => "20x20" %>
+                          <%= link_to @user.firstName + " " + @user.lastName , user_path(@user) %>
+                       <% end %>  
+                       &nbsp;&nbsp;     
+                       <%= "( #{time_ago_in_words comment.created_at} )"%>
+                       &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                       &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                       &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                       &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+                       <% if comment.user_id == current_user.id%>
+                           <%= link_to "x", [@post,comment], :method => :delete, :confirm => 'Are you sure?'%>
+                       <% end %>
+                       </h5>
+                       <p><%= comment.text %></p>  
+                       
+                             
+                   <% end %>
+                   
+                   <%= form_for [@post , @post.comments.build] do |f| %> 
+                       <p><%= f.text_area :text, :size => "50x10" %></p>  
+                       <p><%= f.submit "Post Comment" %></p>    
+                   <% end %>
+
+
+                 <% if @post.user_id == current_user.id %>
+                     <%= link_to 'Edit', edit_post_path(@post) %> |
+                     <%= link_to "Delete", @post, :method => :delete, :confirm => 'Are you sure?'%> |
+                     <%= link_to 'Back', posts_path %>
+                 <% else %> 
+                     <%= link_to 'Back', posts_path %>    
+                 <% end %>
+
+
+
+
+
+
+                 </form>
+             </div> 
+         </div>
+     
+       
+       </div>
+     </div>     
+  </body>
+</html>
+ 
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarsOnline</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<!-- Bootstrap -->
+  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Viga&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+  <%= auto_discovery_link_tag :atom, '/posts.atom' %> 
+
+  <%= stylesheet_link_tag 'style.css',media: 'all' %> 
+  
+</head>
+<body>
+  
+  <% if !user_signed_in? %> 
+	<div id="header">
+		<div>
+			<div id="logo">
+				<a>
+                 <%= image_tag 'logo.png',:size => "380x45" %>
+				</a>
+			</div>
+			<ul id="navigation"> 
+				<li>
+					<a><%= link_to 'signup', new_user_registration_path %></a>
+				</li>
+                
+				<li>
+					<a><%= link_to 'signin', new_user_session_path %></a>
+				</li>
+			</ul>
+		</div>
+	</div> 
+    <% elsif user_signed_in? %> 
+    <div id="header">
+      <div>
+        <div id="logo">
+          <a>
+                   <%= image_tag 'logo.png',:size => "380x45" %>
+          </a>
+        </div>
+        <ul id="navigation"> 
+          <li>
+            <a><%= link_to 'Post',new_post_path %></a>
+          </li>
+          <li>
+            <a><%= link_to 'Home', posts_path %></a>
+          </li>
+          <li>
+            <a><%= image_tag current_user.profilephoto.url,:size => "20x20"  %>
+            <%= link_to ( current_user.firstName + " " + current_user.lastName ).titleize, user_path(current_user) %></a>
+          </li>      
+          <li>
+            <a><%= link_to 'Settings', edit_user_registration_path %></a>
+          </li>
+          <li>
+            <a><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
+          </li>
+        </ul>
+      </div>
+    </div> 
+  <% end -%>
+
+		 <%= yield %>
+	
+   
+</body>
+</html>

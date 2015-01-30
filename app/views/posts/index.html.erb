@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarsOnline</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Viga&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+  <%= auto_discovery_link_tag :atom, '/posts.atom' %> 
+
+  <%= stylesheet_link_tag 'style.css',media: 'all' %>  
+</head>
+<body> 
+
+  <div class="container">       
+      <div id="container_demo"> 
+           
+      
+     <% for post in @posts %>
+       <div id="wrapper">
+            <div class="posts animate form" id="login">
+                 <form  autocomplete="on"> 
+        
+                 <h2 style="display: inline-block;">
+                 <% @user = User.find(post.user_id)  %>
+                 <%= image_tag @user.profilephoto.url, :size => "30x30" %>
+                 <%= link_to ( @user.firstName + " " + @user.lastName ).titleize ,
+                 user_path(@user) %>
+                 &nbsp;&nbsp; 
+                 <%= " ( #{time_ago_in_words post.created_at} )"%>
+                 </h2>   
+                 
+                   
+                   <br /> <%= post.description %> <br />
+                   <h5><%= link_to 'see more', post_path(post) %></h5>
+                 <ul>
+                     <% for asset in post.assets %>
+                       <%= image_tag asset.image.url, :size => "400x400"  %> 
+                       <% break %>
+                     <% end %>
+                </ul> 
+
+                </form>
+            </div>
+      </div>  
+      <br /> 
+     <% end %>
+ 
+       </div> 
+     </div>
+  </body>
+</html>

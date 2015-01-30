@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<%= form_for @post, :html => { :multipart => true } do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<html>
+<head>
+  <title>CarsOnline</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Viga&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+  <%= auto_discovery_link_tag :atom, '/posts.atom' %> 
+
+  <%= stylesheet_link_tag 'style.css',media: 'all' %>  
+</head>
+<body> 
+
+  <div class="container">       
+      <div id="container_demo"> 
+            
+        <div id="wrapper">
+            <div class="posts animate form" id="login">
+                 <form  autocomplete="on"> 
+                   
+
+                       <div class="field">
+                         <%= f.label :model %><br>
+                         <%= f.number_field :model %>
+                       </div>
+                       <div class="field">
+                         <%= f.label :price %><br>
+                         <%= f.text_field :price %>
+                       </div>
+                       <div class="field">
+                         <%= f.label :brand %><br>
+                         <%= f.text_field :brand %>
+                       </div>
+                       <div class="field">
+                         <%= f.label :number_of_km %><br>
+                         <%= f.number_field :number_of_km %>
+                       </div>
+                       <div class="field">
+                         <%= f.label :car_capacity %><br>
+                         <%= f.number_field :car_capacity %>
+                       </div>
+                       <div class="field">
+                         <%= f.label :description %><br>
+                         <%= f.text_area :description %>
+                       </div> 
+                       
+                       <div class="field">
+                       <h4>File Upload</h4>
+
+                       <%= f.fields_for :assets do |asset_fields| %>
+                         <% if asset_fields.object.new_record? %>
+                           <p><%= asset_fields.file_field :image %></p>
+                         <% end %>
+                       <% end %>
+                       
+                       <h4>Show Old Images</h4>
+                       
+                       <%= f.fields_for :assets do |asset_fields| %>
+
+                         <% unless asset_fields.object.new_record? %>
+                           <%= link_to image_tag(asset_fields.object.image.url(:thumb)), 
+                                       asset_fields.object.image.url(:original) %>
+
+                         <% end %>
+                       <% end %>
+                       </div>
+                       <br />
+                       
+                       <div class="actions">
+                         <%= f.submit %>
+                       </div>
+                     <% end %>
+
+
+
+                 </form>
+             </div> 
+         </div>
+     
+       
+       </div>
+     </div>     
+  </body>
+</html>
+ 
+
+
+
+
+
+  

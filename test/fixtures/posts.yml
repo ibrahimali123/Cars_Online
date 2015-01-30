@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: 1
+  price: 1.5
+  brand: MyString
+  number_of_km: 1
+  car_capacity: 1
+  description: MyText
+  user_id: 1
+  user_id: 
+
+two:
+  model: 1
+  price: 1.5
+  brand: MyString
+  number_of_km: 1
+  car_capacity: 1
+  description: MyText
+  user_id: 1
+  user_id: 
